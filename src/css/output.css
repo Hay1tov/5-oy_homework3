@@ -12,12 +12,11 @@
     --spacing: 0.25rem;
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
-    --font-weight-light: 300;
-    --font-weight-medium: 500;
     --font-weight-bold: 700;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-primary: #414141;
+    --color-secondary: #BFBFBF;
     --color-tertiary: #606060;
     --color-accent: #70C05B;
     --font-primary: Rubik;
@@ -226,6 +225,9 @@
   .mt-\[26px\] {
     margin-top: 26px;
   }
+  .mt-\[50px\] {
+    margin-top: 50px;
+  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -261,6 +263,9 @@
   }
   .h-\[160px\] {
     height: 160px;
+  }
+  .h-\[200px\] {
+    height: 200px;
   }
   .h-\[349px\] {
     height: 349px;
@@ -301,6 +306,12 @@
   .w-\[272px\] {
     width: 272px;
   }
+  .w-\[584px\] {
+    width: 584px;
+  }
+  .w-\[px\] {
+    width: px;
+  }
   .w-full {
     width: 100%;
   }
@@ -340,6 +351,9 @@
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
@@ -355,8 +369,32 @@
   .gap-\[11px\] {
     gap: 11px;
   }
+  .gap-x-7 {
+    column-gap: calc(var(--spacing) * 7);
+  }
+  .gap-x-10 {
+    column-gap: calc(var(--spacing) * 10);
+  }
+  .gap-x-40 {
+    column-gap: calc(var(--spacing) * 40);
+  }
+  .gap-x-\[40px\] {
+    column-gap: 40px;
+  }
+  .gap-y-7 {
+    row-gap: calc(var(--spacing) * 7);
+  }
+  .gap-y-10 {
+    row-gap: calc(var(--spacing) * 10);
+  }
+  .gap-y-\[40px\] {
+    row-gap: 40px;
+  }
   .gap-y-\[50px\] {
     row-gap: 50px;
+  }
+  .rounded-\[4px\] {
+    border-radius: 4px;
   }
   .rounded-\[6px\] {
     border-radius: 6px;
@@ -393,11 +431,8 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .bg-\[url\(\'\.\.\/\.\.\/images\/products\/footer-bg\.png\'\)\] {
-    background-image: url('../../images/products/footer-bg.png');
-  }
-  .p-2 {
-    padding: calc(var(--spacing) * 2);
+  .object-cover {
+    object-fit: cover;
   }
   .p-3 {
     padding: calc(var(--spacing) * 3);
@@ -427,6 +462,9 @@
   .text-\[18px\] {
     font-size: 18px;
   }
+  .text-\[64px\] {
+    font-size: 64px;
+  }
   .leading-\[150\%\] {
     --tw-leading: 150%;
     line-height: 150%;
@@ -435,19 +473,14 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .font-light {
-    --tw-font-weight: var(--font-weight-light);
-    font-weight: var(--font-weight-light);
-  }
-  .font-medium {
-    --tw-font-weight: var(--font-weight-medium);
-    font-weight: var(--font-weight-medium);
-  }
   .text-accent {
     color: var(--color-accent);
   }
   .text-primary {
     color: var(--color-primary);
+  }
+  .text-secondary {
+    color: var(--color-secondary);
   }
   .text-tertiary {
     color: var(--color-tertiary);
@@ -473,9 +506,6 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
-  }
-  .text-shadow-sm {
-    text-shadow: 0px 1px 0px var(--tw-text-shadow-color, rgb(0 0 0 / 0.075)), 0px 1px 1px var(--tw-text-shadow-color, rgb(0 0 0 / 0.075)), 0px 2px 2px var(--tw-text-shadow-color, rgb(0 0 0 / 0.075));
   }
   .hover\:border-\[\#FF6633\] {
     &:hover {
@@ -527,7 +557,6 @@
     max-width: 1208px;
     padding-inline: calc(var(--spacing) * 4);
     padding-top: calc(var(--spacing) * 10);
-    padding-bottom: 62px;
   }
 }
 @property --tw-border-style {
@@ -613,15 +642,6 @@
   inherits: false;
   initial-value: solid;
 }
-@property --tw-text-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-text-shadow-alpha {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -643,8 +663,6 @@
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
       --tw-outline-style: solid;
-      --tw-text-shadow-color: initial;
-      --tw-text-shadow-alpha: 100%;
     }
   }
 }
