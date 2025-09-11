@@ -12,6 +12,10 @@
 
 @layer{
   .section-container {
-    @apply max-w-[1208px] container mx-auto px-4 pt-10;
+    @apply max-w-[1240px] container mx-auto px-4 pt-10;
   }
+}
+
+.footer-bg {
+  background-image: url('../images/products/footer-bg.png');
 }
